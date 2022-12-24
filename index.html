@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <header class="w-full">
+        <div class="container d-flex align-center jc-between">
+            <a href="#" class="logo">
+                <img src="images/logo-bookmark.svg" alt="Logo Bookmark" loading="eager">
+            </a>
+            <button class="btn btn-menu d-none-md"></button>
+            <div class="menu-container w-full">
+                <div class="container d-flex align-center flex-column-sm">
+                    <nav class="menu text-uppercase w-full">
+                        <ul class="d-flex align-center jc-center flex-column-sm ">
+                            <li class="w-full"><a href="#features" class="d-block"
+                                    onclick="javascript:toggleShowMenu()">Features</a></li>
+                            <li class="w-full"><a href="#" class="d-block"
+                                    onclick="javascript:toggleShowMenu()">Pricing</a></li>
+                            <li class="w-full"><a href="#" class="d-block"
+                                    onclick="javascript:toggleShowMenu()">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <button class="btn btn-secondary text-uppercase d-block w-full"
+                        onclick="javascript:toggleShowMenu()">Login</button>
+                    <div class="menu__social d-flex align-center d-none-md">
+                        <a href="#"><img src="images/icon-facebook.svg" alt="Logo Faceboo"
+                                onclick="javascript:toggleShowMenu()"></a>
+                        <a href="#"><img src="images/icon-twitter.svg" alt="Logo Twitter"
+                                onclick="javascript:toggleShowMenu()"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="jc-between align-center d-flex-md container-md">
+                <div class="hero__img">
+                    <img src="images/illustration-hero.svg" alt="Hero Image" class="d-flex" loading="eager">
+                </div>
+                <div class="hero__content container text-center-sm">
+                    <h1>A Simple Bookmark Manager</h1>
+                    <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see
+                        your
+                        sites load instantly. Try it for free.</p>
+                    <div class="hero__buttons d-flex align-center jc-center-sm">
+                        <button class="btn btn-primary">Get it on Chrome</button>
+                        <button class="btn btn-secondary">Get it on Firefox </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="features" id="features">
+            <div class="container-md">
+                <div class="features__header text-center container-sm">
+                    <h2>Features</h2>
+                    <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks
+                        sync between your devices so you can access them on the go.</p>
+                </div>
+                <div class="features__options d-flex jc-center align-center flex-column-sm">
+                    <button class="btn btn-third text-center active" onclick="javascript:changeFeature(1, event)">Simple
+                        Bookmarking</button>
+                    <button class="btn btn-third text-center" onclick="javascript:changeFeature(2, event)">Speedy
+                        Searching</button>
+                    <button class="btn btn-third text-center" onclick="javascript:changeFeature(3, event)">Easy
+                        Sharing</button>
+                </div>
+                <div class="features__container container d-flex" id="feature">
+                    <div class="features__item d-flex-md show" id="tab-1">
+                        <div class="features__img">
+                            <img src="images/illustration-features-tab-1.svg" alt="Features #1" class="d-flex"
+                                loading="lazy">
+                        </div>
+                        <div class="features__content text-center-sm">
+                            <h3>Bookmark in one click</h3>
+                            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you
+                                complete control over how you manage your favourite sites.</p>
+                            <button class="btn btn-primary">More Info</button>
+                        </div>
+                    </div>
+                    <div class="features__item d-flex-md" id="tab-2">
+                        <div class="features__img">
+                            <img src="images/illustration-features-tab-2.svg" alt="Features #2" class="d-flex"
+                                loading="lazy">
+                        </div>
+                        <div class="features__content text-center-sm">
+                            <h3>Intelligent search</h3>
+                            <p>Our powerful search feature will help you find saved sites in no time at all. No need to
+                                trawl through all of your bookmarks.</p>
+                            <button class="btn btn-primary">More Info</button>
+                        </div>
+                    </div>
+                    <div class="features__item d-flex-md" id="tab-3">
+                        <div class="features__img">
+                            <img src="images/illustration-features-tab-3.svg" alt="Features #3" class="d-flex"
+                                loading="lazy">
+                        </div>
+                        <div class="features__content text-center-sm">
+                            <h3>Share your bookmarks</h3>
+                            <p>Easily share your bookmarks and collections with others. Create a shareable link that you
+                                can send at the click of a button.</p>
+                            <button class="btn btn-primary">More Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="download">
+            <div class="container">
+                <div class="download__header text-center">
+                    <h3>Download the extension</h3>
+                    <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d
+                        like us to prioritize.</p>
+                </div>
+                <div class="download__container d-flex flex-column-sm align-center jc-center">
+                    <ul class="download__item text-center">
+                        <li>
+                            <img src="images/logo-chrome.svg" alt="Logo Chrome" aria-hidden="true" loading="lazy">
+                        </li>
+                        <li>
+                            <p>Add to Chrome</p>
+                        </li>
+                        <li><span>Minimum versión 6.2</span></li>
+                        <li class="bg"></li>
+                        <li>
+                            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+                        </li>
+                    </ul>
+                    <ul class="download__item text-center">
+                        <li>
+                            <img src="images/logo-firefox.svg" alt="Logo Firefox" aria-hidden="true" loading="lazy">
+                        </li>
+                        <li>
+                            <p>Add to Firefox</p>
+                        </li>
+                        <li><span>Minimum versión 55</span></li>
+                        <li class="bg"></li>
+                        <li>
+                            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+                        </li>
+                    </ul>
+                    <ul class="download__item text-center">
+                        <li>
+                            <img src="images/logo-opera.svg" alt="Logo Opera" aria-hidden="true" loading="lazy">
+                        </li>
+                        <li>
+                            <p>Add to Opera</p>
+                        </li>
+                        <li><span>Minimum versión 46</span></li>
+                        <li class="bg"></li>
+                        <li>
+                            <a href="#" class="btn btn-primary">Add & Install Extension</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="questions">
+            <div class="container">
+                <div class="questions__header text-center">
+                    <h3>Frequently Asked Questions</h3>
+                    <p>Here are some of our FAQs. If you have any other questions you’d like answered please feel free
+                        to email us.</p>
+                </div>
+                <div class="questions__accordion">
+                    <details>
+                        <summary>What is Bookmark?</summary>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies
+                            fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+                    </details>
+                    <details>
+                        <summary>How can I request a new browser?</summary>
+                        <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+                            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+                            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+                            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+                    </details>
+                    <details>
+                        <summary>Is there a mobile app?</summary>
+                        <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
+                            condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra
+                            purus. Sed sollicitudin ex et ultricies bibendum.</p>
+                    </details>
+                    <details>
+                        <summary>What about other Chromium browsers?</summary>
+                        <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui.
+                            Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
+                    </details>
+                </div>
+                <div class="d-flex jc-center">
+                    <a href="#" class="btn btn-primary">More Info</a>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="container text-center">
+                <span class="text-uppercase">35,000+ already joined</span>
+                <h3>Stay up-to-date with what we’re doing</h3>
+                <form action="#" method="post" class="d-flex-md align-center jc-center">
+                    <div class="input-group" id="email">
+                        <input type="email" name="txtEmail" id="txtEmail" required="required">
+                        <label for="txtEmail">Enter your email address</label>
+                        <span>
+                            <img src="images/icon-error.svg" alt="Icon Error" aria-hidden="true" loading="lazy">
+                        </span>
+                        <span>Whoops, make sure it's an email</span>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" class="btn btn-primary">Contact Us</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container d-flex flex-column-sm jc-between align-center">
+            <a href="#" class="logo">
+                <img src="images/logo-bookmark.svg" alt="Logo Bookmark" loading="lazy">
+            </a>
+            <nav>
+                <ul class="d-flex flex-column-sm align-center text-uppercase">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <ul class="social d-flex align-center jc-center">
+                <li><a href="#"><img src="images/icon-facebook.svg" alt="Icon Facebook" loading="lazy"></a></li>
+                <li><a href="#"><img src="images/icon-twitter.svg" alt="Icon Twitter" loading="lazy"></a></li>
+            </ul>
+        </div>
+        <p class="attribution text-center">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://mrubi.vercel.app/" target="_blank">Marcos Rubí</a>.
+        </p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
